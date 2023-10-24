@@ -18,7 +18,9 @@ enum Network {
     Arbitrum,
     ArbitrumGoerli,
     OptimismGoerli,
-    Anvil
+    Anvil,
+    BSCTESTNET,
+    BSC
 }
 
 library NetWorkLib {
@@ -43,6 +45,10 @@ library NetWorkLib {
             return Network.OptimismGoerli;
         } else if (block.chainid == 421613) {
             return Network.ArbitrumGoerli;
+        } else if (block.chainid == 97) {
+            return Network.BSCTESTNET;
+        } else if (block.chainid == 56) {
+            return Network.BSC;
         } else {
             revert("unsupported network");
         }

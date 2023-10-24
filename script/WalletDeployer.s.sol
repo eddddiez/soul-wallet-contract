@@ -39,7 +39,11 @@ contract WalletDeployer is Script, DeployHelper {
         } else if (network == Network.OptimismGoerli) {
             console.log("deploy soul wallet contract on OptimismGoerli");
             delpoy();
-        } else {
+        } else if (network == Network.BSCTESTNET) {
+            console.log("deploy soul wallet contract on BSCTESTNET");
+            delpoy();
+        }
+        else {
             console.log("deploy soul wallet contract on testnet");
             delpoy();
         }
